@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>captcha</title>
+        <script>
+            document.addEventListener("DOMContentLoaded", ()=>{
+                const form = document.addEventListener("form");
+                form.preventDefault();
+            })
+        </script>
+    </head>
+    <body>
+        <div class = "form">
+            <form method = "POST">
+                {% csrf_token %}
+                {{ form }}
+                <button>submit</button>
+            </form>
+           
+        </div>
+    </body>
+</html>
